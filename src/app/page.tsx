@@ -1,44 +1,30 @@
-import Link from 'next/link'
+import { FC } from 'react'
 
-export default function Home() {
+const Home: FC = () => {
   return (
-    <main className="min-h-screen p-8 md:p-24">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          Modern Web Base 🚀
-        </h1>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 border rounded-lg hover:shadow-lg transition">
-            <h2 className="text-2xl font-semibold mb-4">Hızlı Başlangıç</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Next.js, TypeScript ve TailwindCSS ile modern web geliştirmeye başlayın.
-            </p>
-            <Link 
-              href="/docs"
-              className="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-            >
-              Dokümantasyon
-            </Link>
-          </div>
-          
-          <div className="p-6 border rounded-lg hover:shadow-lg transition">
-            <h2 className="text-2xl font-semibold mb-4">Özellikler</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-              <li>Next.js 14</li>
-              <li>TypeScript</li>
-              <li>TailwindCSS</li>
-              <li>ESLint</li>
-              <li>Dark Mode</li>
-            </ul>
-          </div>
-        </div>
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <div className="relative flex place-items-center">
+        <h1 className="text-4xl font-bold">🚀 Modern Web Base</h1>
+      </div>
 
-        <blockquote className="p-6 border-l-4 border-primary bg-gray-50 dark:bg-gray-800">
-          <p className="text-lg italic">{"LIFE IS SHORT BE QUICK."}</p>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">- Modern Web Base</p>
-        </blockquote>
+      <div className="mt-8 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+        <a
+          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className="mb-3 text-2xl font-semibold">
+            Docs{' '}
+            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+              →
+            </span>
+          </h2>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">Next.js dokümantasyonunu keşfedin.</p>
+        </a>
       </div>
     </main>
   )
 }
+
+export default Home
